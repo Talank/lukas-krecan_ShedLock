@@ -37,6 +37,7 @@ jobs:
           restore-keys: |
             maven-
       - name: Aggressive cleanup
+        if: runner.os == 'Linux'
         run: |
           # Remove .NET SDKs
           sudo rm -rf /usr/share/dotnet
